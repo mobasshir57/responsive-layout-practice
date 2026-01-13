@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-section {
+    width: 100%;
+    height: 750px;
+    background-color: rgba(0, 255, 255, 0.348);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content {
+    width: 70%;
+    margin: 0px auto;
+    background-color: antiquewhite;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.title{
+    font-size: 95%;
+    font-weight: 900;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 255);
+}
+.title:hover{
+    color: black;
+    background-color: aquamarine;
+    transition: .5s;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: black 1px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(130, 1, 250, 0.737);
+}
+.card:hover{
+    background-color: brown;
+}
+.card a {
+    text-decoration: none;
+    transition: .5s;
+    color: black;
+}
+.card-info a:hover{
+    color: rgb(255, 251, 0);
+}
+.card-info {
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    background-color: aliceblue;
+    border: red 1px solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-info:hover{
+    background-color: aqua;
+    color: green;
+    transition: 1s ;
+}
+
+
+/* responsive section for tablet */
+@media screen and (min-width:576px) and (max-width:800px) {
+    .card{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* responsive section for Mobile */
+@media screen and (max-width:576px) {
+    .card{
+        grid-template-columns: 1fr;
+    }
+}

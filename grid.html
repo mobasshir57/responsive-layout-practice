@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px) 50px 50px;   
+            text-align: center;
+           
+        }
+        
+        .box{
+            background-color: gray;
+            padding: 15px;
+             padding-top: 50%;
+        }
+        .clr{
+            background-color: red;
+        }
+        .side{
+            grid-row: span 5;
+            padding: 20px;
+        }
+        .footer{
+            grid-column: span 3;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="side box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+        <div class="box clr">box-6</div>
+        <div class="box clr">box-7</div>
+        <div class="box">box-8</div>
+        <div class="box clr">box-9</div>
+        <div class="box clr">box-10</div>
+        <div class="footer box">box-11</div>
+        <div class="footer box">box-12</div>
+    </div>
 </body>
 </html>

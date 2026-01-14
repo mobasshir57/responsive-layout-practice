@@ -1,0 +1,71 @@
+#container>* {
+    background-color: rgb(236, 214, 88);
+    border: red 3px solid;
+    padding: 30px;
+}
+ul{
+    list-style: none;
+}
+
+header {
+    grid-area: head;
+}
+
+nav {
+    grid-area: navbar;
+}
+
+main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sponsered {
+    grid-area: ads;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#container {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    grid-template-areas:
+        "head    head   head   head"
+        "navbar  main   main   sidebar"
+        "navbar  main   main   ads"
+        "footer  footer footer footer"
+    ;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 576px) {
+    #container {
+        grid-template-areas:
+            "head"
+            "navbar"
+            "main"
+            "sidebar"
+            "ads"
+            "footer"
+
+        ;
+    }
+}
+
+/* Tablet responsive */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    #container {
+        grid-template-areas:
+            "head      head"
+            "navbar    navbar"
+            "sidebar    main"
+            "ads    footer";
+    }
+
+}
